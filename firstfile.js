@@ -12,6 +12,12 @@ github.authenticate({
 
 github.repos.getAll(
 {
+  username: 'mcdonam7'
+}, function (err, res) {
+    if (err) throw err
+    var sizeArray = new Array(res.data.length)
+    var languageArray = new Array(res.data.length)
+    var commitsArray = new Array(res.data.length)
 }
 
 );
