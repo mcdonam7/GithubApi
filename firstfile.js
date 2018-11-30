@@ -30,5 +30,23 @@ github.repos.getAll(
   }
 )
 
+github.repos.getCommits(
+  {
+    owner: 'mcdonam7',
+    repo:  'LowestCommonAncestor'
+  }, function (err, res) {
+      if (err) throw err
+      console.log("\n***************************************")
+      console.log('\x1b[33m%s\x1b[0m', ("   LowestCommonAncestor Commits     "))
+      console.log("***************************************")
+      for (y=0; y<res.data.length; y++){
+        var cutResult = res.data[y].commit.author.date.substring(0, 10)
+        message = res.data[y].commit.message
+        console.log((y+1) + ". Date: " + cutResult + ", Comment: " + message)
+      }
+      console.log("Number of commits for LowestCommonAncestor: " + (res.data.length))
+    }
+  )
+  
 
 );
