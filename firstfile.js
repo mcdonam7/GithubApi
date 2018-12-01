@@ -7,7 +7,7 @@ var repoArray = []
 
 github.authenticate({
   type: 'oauth',
-  token: 'bf693bec85eae3efce32b1da4e52c1b29fa6678b'
+  token: '45892354d836fd6773dccec9e402346163ef954f'
 })
 
 github.repos.getAll(
